@@ -52,7 +52,7 @@ namespace Core.DataAccess.EntityFramework
 
         }
 
-        public IList<TEntiy> GetList(Expression<Func<TEntiy, bool>> filter = null)
+        public List<TEntiy> GetList(Expression<Func<TEntiy, bool>> filter = null)
         {
             using (var context = new TContext())
             {
@@ -63,5 +63,6 @@ namespace Core.DataAccess.EntityFramework
 
 
         }
+
     }
 }
