@@ -11,5 +11,6 @@ namespace DataAccess.Concrete.EntityFramework.Contexts
             optionsBuilder.UseSqlServer(connectionString:@"Server=(localdb)\mssqllocaldb;Database=Northwind;Trusted_Connection=true");
         }
         public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
     }
 }
