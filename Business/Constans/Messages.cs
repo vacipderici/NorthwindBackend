@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Core.Entities.Concrete;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -11,5 +12,7 @@ namespace Business.Constans
         public static string ProductDeleted = "Ürün başaralıyla silindi.";
 
         public static string ProductUpdated = "Ürün başarıyla güncellendi.";
+
+        public static string UserNotFound = "Kullanıcı bulunamadı";
     }
 }

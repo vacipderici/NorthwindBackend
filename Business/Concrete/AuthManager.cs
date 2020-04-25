@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Business.Constans;
 using Core.Entities.Concrete;
 using Core.Utilities.Results;
 using Core.Utilities.Security.Jwt;
@@ -30,7 +31,12 @@ namespace Business.Concrete
 
         public IDataResult<User> Login(UserForLoginDto userForLoginDto)
         {
-            throw new NotImplementedException();
+            var userToCheck = _userService.GetByMail(userForLoginDto.Email);
+            if (userToCheck ==null)
+            {
+                return new ErrorDataResult<User>(Messages.UserNotFound);
+            }
+            //Kulanıcının gnderdiği şifreyi tuzlayıp hasleri kontrol edeceğiz db ile. Hashlema için hashelper yapacağız.
         }
 
         public IDataResult<User> Register(UserForRegisterDto userForRegisterDto, string password)
