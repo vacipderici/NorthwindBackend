@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Core.Utilities.Security.Encription;
+using Core.Utilities.Security.Encyption;
 using Core.Utilities.Security.Jwt;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -31,26 +31,27 @@ namespace WebAPI
         {
             services.AddControllers();
             services.AddCors(options =>
-            { 
-            options.AddPolicy("AllowOrigin",
-               builder => builder.WithOrigins("http://localhost:3000"));  //Buradan gelenlere de izin ver anlamında.
+            {
+                options.AddPolicy("AllowOrigin",
+                    builder => builder.WithOrigins("http://localhost:3000"));
             });
+
             var tokenOptions = Configuration.GetSection("TokenOptions").Get<TokenOptions>();
+
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
                 {
-                    options.TokenValidationParameters = new TokenValidationParameters
+                    options.TokenValidationParameters=new TokenValidationParameters
                     {
                         ValidateIssuer = true,
                         ValidateAudience = true,
                         ValidateLifetime = true,
                         ValidIssuer = tokenOptions.Issuer,
+                        ValidAudience = tokenOptions.Audience,
                         ValidateIssuerSigningKey = true,
                         IssuerSigningKey = SecurityKeyHelper.CreateSecurityKey(tokenOptions.SecurityKey)
-
                     };
                 });
-          
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -60,16 +61,16 @@ namespace WebAPI
             {
                 app.UseDeveloperExceptionPage();
             }
-            app.UseCors(builder => builder.WithOrigins("http://localhost:3000").AllowAnyHeader()); //Buradan gelen her türlü talebe izin var
-            
+
+            app.UseCors(builder => builder.WithOrigins("http://localhost:3000").AllowAnyHeader());
 
             app.UseHttpsRedirection();
 
             app.UseRouting();
 
-            app.UseAuthorization(); //Evin içinde ne yapılacak. Nereye yetkili değil.
+            app.UseAuthentication();
 
-            app.UseAuthentication(); //bir yere girmek için anahtar
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

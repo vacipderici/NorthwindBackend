@@ -1,12 +1,12 @@
-﻿using Core.Entities.Concrete;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Core.Entities.Concrete;
 
 namespace Core.Utilities.Security.Jwt
 {
-  public  interface ITokenHelper //Bir gün farklı bir token aracı kullanabiliriz. O nedenle .
+    public interface ITokenHelper
     {
-        AccessToken CreateToken(User user, List<OperationClaim> operationClaims);  //Kullanıcı bilgisi ve rollerini vermiş oldum.
+        AccessToken CreateToken(User user, List<OperationClaim> operationClaims);
     }
 }

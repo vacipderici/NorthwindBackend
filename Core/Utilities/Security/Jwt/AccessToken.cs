@@ -4,9 +4,10 @@ using System.Text;
 
 namespace Core.Utilities.Security.Jwt
 {
-   public class AccessToken //Erişim tokenimiz erişim anahtarımız
+    public class AccessToken
     {
         public string Token { get; set; }
-        public DateTime Expiration { get; set; } //Token Süremiz
+        public DateTime Expiration { get; set; }
+
     }
 }
