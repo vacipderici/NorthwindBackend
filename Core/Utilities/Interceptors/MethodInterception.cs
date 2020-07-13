@@ -7,7 +7,7 @@ namespace Core.Utilities.Interceptors
 {
    public abstract class MethodInterception:MethodInterceptionBaseAttribute
     {
-        protected virtual void OnBeform(IInvocation) { }
+        protected virtual void OnBefore(IInvocation) { }
         protected virtual void OnAfter(IInvocation) { }
         protected virtual void OnException(IInvocation) { }
         protected virtual void OnSuccess(IInvocation) { }
@@ -15,7 +15,7 @@ namespace Core.Utilities.Interceptors
         public override void Intercept(IInvocation invocation)
         {
             var isSuccess = true;
-            OnBeform(invocation);
+            OnBefore(invocation);
             try
             {
                 invocation.Proceed();
