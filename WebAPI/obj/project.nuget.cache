@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "2Z6uqdQ1/Raj8OeK2YJui8P0mzjuWEHcYQzey8cUnIHkrVbsvyVkj1DkoUo5ByaWHJTR/mJ1k6Iy/7SFu1WD1Q==",
+  "dgSpecHash": "/CxweZqXKCRwPchtuxxnMxECSIwEXzab+r45RBw4b4S0DM2r4FO4I4CV0Uikpe3JyaL1uQNl/+gEg3M3JgXCig==",
   "success": true,
   "projectFilePath": "C:\\Users\\vacip\\source\\repos\\NorthwindBackend\\WebAPI\\WebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vacip\\.nuget\\packages\\autofac\\4.9.4\\autofac.4.9.4.nupkg.sha512",
     "C:\\Users\\vacip\\.nuget\\packages\\autofac.extensions.dependencyinjection\\4.4.0\\autofac.extensions.dependencyinjection.4.4.0.nupkg.sha512",
+    "C:\\Users\\vacip\\.nuget\\packages\\fluentvalidation\\9.0.0\\fluentvalidation.9.0.0.nupkg.sha512",
     "C:\\Users\\vacip\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\vacip\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\vacip\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",

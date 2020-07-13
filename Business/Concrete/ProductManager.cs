@@ -4,10 +4,13 @@ using System.Linq;
 using System.Text;
 using Business.Abstract;
 using Business.Constants;
+using Business.FluentValidation;
+using Core.CrossCunttingConcerns.Validator;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
+using FluentValidation;
 
 namespace Business.Concrete
 {
@@ -37,6 +40,15 @@ namespace Business.Concrete
 
         public IResult Add(Product product)
         {
+            //ProductValidator productValidator = new ProductValidator();
+            //var result = productValidator.Validate(product);
+            //if (!result.IsValid)
+            //{
+            //    throw new ValidationException(result.Errors);
+
+            //}
+            //ValidationTool.Validate(new ProductValidator, product); İkinci Yol olarak bu da olabilirdi. Ancak daha oturmuş bir yapı istedim.
+
             //Business codes
             _productDal.Add(product);
            return  new SuccessResult(Messages.ProductAdded);

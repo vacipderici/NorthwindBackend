@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "7rQ1fuSNVYvLPQMTSE/Uo2BKFQ0cv3cf7dfa5hlHMzwTJV/ByXg4ci27+6EDGUGiefh2uNu8ByC9rCnjZoyF4g==",
+  "dgSpecHash": "JFDsKgbm93j0OT1Em8NYrclLEXym0HxmNN4lrPPVGE2Y2yh8IKA0a8LdMOP1i7Psv+25tAGeOeQicN01e++HVw==",
   "success": true,
   "projectFilePath": "C:\\Users\\vacip\\source\\repos\\NorthwindBackend\\Core\\Core.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\vacip\\.nuget\\packages\\fluentvalidation\\9.0.0\\fluentvalidation.9.0.0.nupkg.sha512",
     "C:\\Users\\vacip\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\vacip\\.nuget\\packages\\microsoft.entityframeworkcore\\2.2.6\\microsoft.entityframeworkcore.2.2.6.nupkg.sha512",
     "C:\\Users\\vacip\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\2.2.6\\microsoft.entityframeworkcore.abstractions.2.2.6.nupkg.sha512",
