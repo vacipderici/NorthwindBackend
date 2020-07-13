@@ -1,4 +1,5 @@
-﻿using FluentValidation;
+﻿
+using FluentValidation;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -11,7 +12,7 @@ namespace Core.CrossCunttingConcerns.Validator
         {
 
 
-            var result = validator.Validate(entity);
+            var result = validator.Validate((IValidationContext)entity);
             if (!result.IsValid)
             {
                 throw new ValidationException(result.Errors);

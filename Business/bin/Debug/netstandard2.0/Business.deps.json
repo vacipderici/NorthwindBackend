@@ -12,6 +12,7 @@
           "Autofac": "4.9.4",
           "DataAccess": "1.0.0",
           "Entities": "1.0.0",
+          "FluentValidation": "9.0.0",
           "NETStandard.Library": "2.0.3"
         },
         "runtime": {
@@ -23,6 +24,53 @@
           "lib/netstandard2.0/Autofac.dll": {
             "assemblyVersion": "4.9.4.0",
             "fileVersion": "4.9.4.0"
+          }
+        }
+      },
+      "Castle.Core/1.2.0": {
+        "dependencies": {
+          "NLog": "1.0.0.505",
+          "log4net": "1.2.10"
+        },
+        "runtime": {
+          "lib/Castle.Core.dll": {
+            "assemblyVersion": "1.2.0.0",
+            "fileVersion": "1.2.0.6623"
+          },
+          "lib/Castle.Services.Logging.NLogIntegration.dll": {
+            "assemblyVersion": "1.2.0.0",
+            "fileVersion": "1.2.0.6627"
+          },
+          "lib/Castle.Services.Logging.log4netIntegration.dll": {
+            "assemblyVersion": "1.2.0.0",
+            "fileVersion": "1.2.0.6627"
+          }
+        }
+      },
+      "Castle.DynamicProxy/2.2.0": {
+        "dependencies": {
+          "Castle.Core": "1.2.0"
+        },
+        "runtime": {
+          "lib/Castle.DynamicProxy2.dll": {
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.0.6628"
+          }
+        }
+      },
+      "FluentValidation/9.0.0": {
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "9.0.0.0"
+          }
+        }
+      },
+      "log4net/1.2.10": {
+        "runtime": {
+          "lib/2.0/log4net.dll": {
+            "assemblyVersion": "1.2.10.0",
+            "fileVersion": "1.2.10.0"
           }
         }
       },
@@ -314,6 +362,14 @@
           "lib/netstandard1.3/Newtonsoft.Json.dll": {
             "assemblyVersion": "10.0.0.0",
             "fileVersion": "10.0.1.20720"
+          }
+        }
+      },
+      "NLog/1.0.0.505": {
+        "runtime": {
+          "lib/NLog.dll": {
+            "assemblyVersion": "1.0.0.505",
+            "fileVersion": "1.0.0.505"
           }
         }
       },
@@ -1026,6 +1082,8 @@
       },
       "Core/1.0.0": {
         "dependencies": {
+          "Castle.DynamicProxy": "2.2.0",
+          "FluentValidation": "9.0.0",
           "Microsoft.EntityFrameworkCore": "2.2.6",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.2.6",
           "Microsoft.Extensions.Configuration": "2.2.0",
@@ -1068,6 +1126,34 @@
       "sha512": "sha512-dYiDG4yoV7GDCoOc66d1sqMmg2gwDyomHKgATuMfhFzYxVpWEltToHVHXI3I9vOEvIXE55S4OZPY0ldiZmZtpA==",
       "path": "autofac/4.9.4",
       "hashPath": "autofac.4.9.4.nupkg.sha512"
+    },
+    "Castle.Core/1.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Nzf3go+P9ZReJOWX1FVAnd2eBcF7u1sjIll2KC80B2kTmJTJY/cqvJG6kK/x/dXrPh4zmdPatnnVWZ/nrKzEaw==",
+      "path": "castle.core/1.2.0",
+      "hashPath": "castle.core.1.2.0.nupkg.sha512"
+    },
+    "Castle.DynamicProxy/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3eiJiPYF7wK0CmHn47d56kbJLfvTGfLZ8D5G1dLLRbCo8h28gn6qkKTxFk/65FDz9zeUqWWmpZ3SAwhbpOr1sw==",
+      "path": "castle.dynamicproxy/2.2.0",
+      "hashPath": "castle.dynamicproxy.2.2.0.nupkg.sha512"
+    },
+    "FluentValidation/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2SPrOW660J7v56AC2Wd4MqdiXOoEUPf72J2yMx2F3y6Ylw5pvuYrbjI435wimdTCleGgssgsdTwUJHc72dkTMw==",
+      "path": "fluentvalidation/9.0.0",
+      "hashPath": "fluentvalidation.9.0.0.nupkg.sha512"
+    },
+    "log4net/1.2.10": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yP7PCpxPt5cB9yiRAvCwyW5YRqXV4jM4tpVLnm/ls2nJt786l5srbSdm5xIEVMXz/kOYqLKP177Gyqey1wdP/A==",
+      "path": "log4net/1.2.10",
+      "hashPath": "log4net.1.2.10.nupkg.sha512"
     },
     "Microsoft.CSharp/4.3.0": {
       "type": "package",
@@ -1243,6 +1329,13 @@
       "sha512": "sha512-ebWzW9j2nwxQeBo59As2TYn7nYr9BHicqqCwHOD1Vdo+50HBtLPuqdiCYJcLdTRknpYis/DSEOQz5KmZxwrIAg==",
       "path": "newtonsoft.json/10.0.1",
       "hashPath": "newtonsoft.json.10.0.1.nupkg.sha512"
+    },
+    "NLog/1.0.0.505": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7dnEHYmlfAho9gbM0KvjcfSej419aevcYyDNFcQf6ALcj+ZEkns64ZAN1KOOQK0lL20WHWXbKML4aA088BENTg==",
+      "path": "nlog/1.0.0.505",
+      "hashPath": "nlog.1.0.0.505.nupkg.sha512"
     },
     "Remotion.Linq/2.2.0": {
       "type": "package",

@@ -384,3 +384,10 @@ C:\Users\vacip\source\repos\NorthwindBackend\WebAPI\obj\Debug\netcoreapp3.0\stat
 C:\Users\vacip\source\repos\NorthwindBackend\WebAPI\obj\Debug\netcoreapp3.0\WebAPI.dll
 C:\Users\vacip\source\repos\NorthwindBackend\WebAPI\obj\Debug\netcoreapp3.0\WebAPI.pdb
 C:\Users\vacip\source\repos\NorthwindBackend\WebAPI\obj\Debug\netcoreapp3.0\WebAPI.genruntimeconfig.cache
+C:\Users\vacip\source\repos\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.0\Castle.Core.dll
+C:\Users\vacip\source\repos\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.0\Castle.Services.Logging.NLogIntegration.dll
+C:\Users\vacip\source\repos\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.0\Castle.Services.Logging.log4netIntegration.dll
+C:\Users\vacip\source\repos\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.0\Castle.DynamicProxy2.dll
+C:\Users\vacip\source\repos\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.0\FluentValidation.dll
+C:\Users\vacip\source\repos\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.0\log4net.dll
+C:\Users\vacip\source\repos\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.0\NLog.dll

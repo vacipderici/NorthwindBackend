@@ -45,3 +45,4 @@ C:\Users\vacip\source\repos\NorthwindBackend\Business\obj\Debug\netstandard2.0\B
 C:\Users\vacip\source\repos\NorthwindBackend\Business\obj\Debug\netstandard2.0\Business.csproj.CopyComplete
 C:\Users\vacip\source\repos\NorthwindBackend\Business\obj\Debug\netstandard2.0\Business.dll
 C:\Users\vacip\source\repos\NorthwindBackend\Business\obj\Debug\netstandard2.0\Business.pdb
+C:\Users\vacip\source\repos\NorthwindBackend\Business\obj\Debug\netstandard2.0\Business.csproj.CoreCompileInputs.cache
