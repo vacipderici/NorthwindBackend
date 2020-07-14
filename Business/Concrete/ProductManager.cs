@@ -4,8 +4,11 @@ using System.Linq;
 using System.Text;
 using Business.Abstract;
 using Business.Constants;
-using Business.FluentValidation;
-using Core.CrossCunttingConcerns.Validator;
+using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Caching;
+using Core.Aspects.Autofac.Transaction;
+using Core.Aspects.Autofac.Validation;
+using Core.CrossCuttingConcerns.Validation;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using DataAccess.Concrete.EntityFramework;
@@ -33,25 +36,18 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Product>>(_productDal.GetList().ToList());
         }
 
+        [CacheAspect(duration:10)]
         public IDataResult<List<Product>> GetListByCategory(int categoryId)
         {
             return new SuccessDataResult<List<Product>>(_productDal.GetList(p => p.CategoryId == categoryId).ToList());
         }
 
+        [ValidationAspect(typeof(ProductValidator),Priority = 1)]
+        [CacheRemoveAspect("IProductService.Get")]
         public IResult Add(Product product)
         {
-            //ProductValidator productValidator = new ProductValidator();
-            //var result = productValidator.Validate(product);
-            //if (!result.IsValid)
-            //{
-            //    throw new ValidationException(result.Errors);
-
-            //}
-            //ValidationTool.Validate(new ProductValidator, product); İkinci Yol olarak bu da olabilirdi. Ancak daha oturmuş bir yapı istedim.
-
-            //Business codes
             _productDal.Add(product);
-           return  new SuccessResult(Messages.ProductAdded);
+            return  new SuccessResult(Messages.ProductAdded);
         }
 
         public IResult Delete(Product product)
@@ -63,6 +59,14 @@ namespace Business.Concrete
         public IResult Update(Product product)
         {
             _productDal.Update(product);
+            return new SuccessResult(Messages.ProductUpdated);
+        }
+
+        [TransactionScopeAspect]
+        public IResult TransactionalOperation(Product product)
+        {
+            _productDal.Update(product);
+            //_productDal.Add(product);
             return new SuccessResult(Messages.ProductUpdated);
         }
     }

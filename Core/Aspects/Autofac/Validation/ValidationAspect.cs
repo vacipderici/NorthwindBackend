@@ -1,12 +1,12 @@
-﻿using Castle.Core.Interceptor;
-using Core.CrossCunttingConcerns.Validator;
-using Core.Utilities.Interceptors;
-using Core.Utilities.Messages;
-using FluentValidation;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Castle.DynamicProxy;
+using Core.CrossCuttingConcerns.Validation;
+using Core.Utilities.Interceptors;
+using Core.Utilities.Messages;
+using FluentValidation;
 
 namespace Core.Aspects.Autofac.Validation
 {
@@ -19,6 +19,7 @@ namespace Core.Aspects.Autofac.Validation
             {
                 throw new Exception(AspectMessages.WrongValidationType);
             }
+
             _validatorType = validatorType;
         }
         protected override void OnBefore(IInvocation invocation)
@@ -28,8 +29,7 @@ namespace Core.Aspects.Autofac.Validation
             var entities = invocation.Arguments.Where(t => t.GetType() == entityType);
             foreach (var entity in entities)
             {
-                ValidationTool.Validate(validator, entity);
-
+                ValidationTool.Validate(validator,entity);
             }
         }
     }
